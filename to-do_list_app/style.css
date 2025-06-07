@@ -37,6 +37,15 @@
     padding: 0.5rem;
 }
 
+#error {
+    display: none;
+    color: crimson;
+    margin-bottom: 0.5rem;
+    background-color: #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+
 #add_btn {
     border: none;
     padding: 0.5rem 1rem;
