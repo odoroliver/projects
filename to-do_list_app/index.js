@@ -10,7 +10,7 @@ add_btn.onclick = function addTask() {
         taskContainer.innerHTML += `
             <div class="task_row">
                 <img src="images/unchecked.png" class="check_img" data-checked="false">
-                <span class="task_text">${taskInput.value}</span>
+                <input type="text" class="task_text" id="task_input" value="${taskInput.value}">
                 <button class="del_btn">DEL</button>
             </div>`;
         taskInput.value = "";
