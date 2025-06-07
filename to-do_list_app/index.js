@@ -1,16 +1,22 @@
 let taskInput = document.getElementById("task_input");
 let add_btn = document.getElementById("add_btn");
 let taskContainer = document.getElementById("task_container");
+let errorDiv = document.getElementById("error");
 
 add_btn.onclick = function addTask() {
     if (taskInput.value.trim() === '') {
-        alert("You must write something!");
+        errorDiv.style.cssText = `
+        display: block;
+        `;
     }
     else {
+        errorDiv.style.cssText = `
+        display: none;
+        `;
         taskContainer.innerHTML += `
             <div class="task_row">
                 <img src="images/unchecked.png" class="check_img" data-checked="false">
-                <span class="task_text">${taskInput.value}</span>
+                <input type="text" class="task_text" id="task_input" value="${taskInput.value}">
                 <button class="del_btn">DEL</button>
             </div>`;
         taskInput.value = "";

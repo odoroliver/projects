@@ -10,6 +10,9 @@
     height: 100vh;
     background: linear-gradient(135deg, #1c1f2b, #3a3d5c);
     padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .to-do_app {
@@ -29,12 +32,21 @@
     margin-bottom: 1rem;
 }
 
-input {
+#task_input {
     border: none;
     background: transparent;
     flex: 1;
     outline: none;
     padding: 0.5rem;
+}
+
+#error {
+    display: none;
+    color: crimson;
+    margin-bottom: 0.5rem;
+    background-color: #ddd;
+    text-align: center;
+    font-weight: bold;
 }
 
 #add_btn {
@@ -79,9 +91,12 @@ h2 {
 }
 
 @media (min-width: 768px) {
-    .to-do_app {
-        max-width: 800px;
-        margin: auto;
-        margin-top: 2rem;
-    }
+        .to-do_app {
+            width: 90%;
+            max-width: 800px;
+            margin: 0;
+        }
+        .container {
+            align-items: center;
+        }
 }
