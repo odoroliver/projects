@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(246, 239, 229);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2rem 1rem;
+}
+
+.screen {
+    display: none;
+    padding: 1rem;
+}
+
+.screen.active {
+    display: block;
+}
+
+#start-screen h1 {
+    color: rgb(234, 104, 54);
+    margin-bottom: 1.5rem;
+}
+
+#start-screen p {
+    margin-bottom: 1.5rem;
+    color: rgb(142, 141, 143);
+}
+
+#start-screen button {
+    background-color: rgb(234, 104, 54);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#question-screen h2 {
+    margin-bottom: 1rem;
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: rgb(142, 141, 143);
+}
+
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answerBtn {
+    text-align: left;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgb(248, 240, 229);
+    border: 2px solid rgb(239, 229, 218);
+    color: rgb(96, 89, 81);
+    font-size: 1rem;
+}
+
+.answerBtn:hover {
+  background-color: #eadbc8;
+  border-color: #dac0ae;
+}
+
+.answerBtn.correct {
+  background-color: #e6fff0;
+  border-color: #a3f0c4;
+  color: #28a745;
+}
+
+.answerBtn.incorrect {
+  background-color: #fff0f0;
+  border-color: #ffbdbd;
+  color: #dc3545;
+}
+
+#progress-bar {
+    background-color: rgb(248, 240, 229);
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    background-color: rgb(234, 104, 54);
+    height: 10px;
+    transition: width 0.3s ease;
+}
+
+#result-screen h1 {
+    color: rgb(234, 104, 54);
+    margin-bottom: 1.5rem;
+}
+
+.result-info {
+    background-color: rgb(246, 239, 229);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.result-info h2 {
+    color: rgb(234, 104, 54);
+}
+
+#result-screen button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(234, 104, 54);
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 75%;
+    }
+}
