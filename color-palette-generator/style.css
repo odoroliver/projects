@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #83a8df, #c3cfe2);
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: #667eea;
+    height: 3px;
+    border-radius: 2px;
+}
+
+#generateBtn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#generateBtn:hover {
+    box-shadow: 0 6px 10px rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+#generateBtn:active {
+    transform: translateY(0);
+}
+
+.paletteContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.paletteBox {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.paletteBox:hover {
+    transform: translateY(-5px);
+}
+
+.colorBox {
+    height: 120px;
+    cursor: pointer;
+}
+
+.colorInfo {
+    background-color: #fff;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.hexValue {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.copyBtn {
+    cursor: pointer;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.copyBtn:hover {
+    color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .paletteContainer {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
